@@ -86,20 +86,7 @@ AFRAME.registerComponent('drive', {
             cameraRig.object3D.getWorldDirection(cameraDirection);
             var cameraMoveControl = cameraRig.getAttribute("movement-controls")
 
-            if (e.code == "Space") {             
-                var startCar = document.querySelector("#control-break")
-                startCar.setAttribute("material", "color", "gray")
-            }
-
-            if (e.code == "ArrowUp") {
-                if (multiply > 10) {
-                    multiply -= 0.5
-                    cameraRig.setAttribute("movement-controls", {"speed": cameraMoveControl.speed + 0.005})
-                }
-                var accelerateCar = document.querySelector("#control-acce")
-                accelerateCar.setAttribute("material", "color", "gray")
-
-            }
+            
         })
     }
 
